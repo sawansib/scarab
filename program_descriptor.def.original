@@ -1,0 +1,33 @@
+import os
+
+perlbench_17_s_train0 = Program("perlbench_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/perlbench_17_s/train/run_dir")
+perlbench_17_s_train = Benchmark("perlbench_17_s_train", [perlbench_17_s_train0])
+
+gcc_17_s_train0 = Program("gcc_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/gcc_17_s/train/run_dir")
+gcc_17_s_train = Benchmark("gcc_17_s_train", [gcc_17_s_train0])
+
+mcf_17_s_train0 = Program("mcf_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/mcf_17_s/train/run_dir")
+mcf_17_s_train = Benchmark("mcf_17_s_train", [mcf_17_s_train0])
+
+omnetpp_17_s_train0 = Program("omnetpp_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/omnetpp_17_s/train/run_dir")
+omnetpp_17_s_train = Benchmark("omnetpp_17_s_train", [omnetpp_17_s_train0])
+
+xalancbmk_17_s_train0 = Program("xalancbmk_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/xalancbmk_17_s/train/run_dir")
+xalancbmk_17_s_train = Benchmark("xalancbmk_17_s_train", [xalancbmk_17_s_train0])
+
+x264_17_s_train0 = Program("x264_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/x264_17_s/train/run_dir")
+x264_17_s_train = Benchmark("x264_17_s_train", [x264_17_s_train0])
+
+deepsjeng_17_s_train0 = Program("deepsjeng_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/deepsjeng_17_s/train/run_dir")
+deepsjeng_17_s_train = Benchmark("deepsjeng_17_s_train", [deepsjeng_17_s_train0])
+
+leela_17_s_train0 = Program("leela_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/leela_17_s/train/run_dir")
+leela_17_s_train = Benchmark("leela_17_s_train", [leela_17_s_train0])
+
+exchange2_17_s_train0 = Program("exchange2_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/exchange2_17_s/train/run_dir")
+exchange2_17_s_train = Benchmark("exchange2_17_s_train", [exchange2_17_s_train0])
+
+xz_17_s_train0 = Program("xz_17_s_train0", "./perlbench_s_base.x86-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", path="/home/ssingh/scarab/spec-run/xz_17_s/train/run_dir")
+xz_17_s_train = Benchmark("xz_17_s_train", [xz_17_s_train0])
+
+spec17_int_speed = Suite("spec17_int_speed", [perlbench_17_s_train, gcc_17_s_train, mcf_17_s_train, omnetpp_17_s_train, xalancbmk_17_s_train, x264_17_s_train, deepsjeng_17_s_train, leela_17_s_train, exchange2_17_s_train, xz_17_s_train])

@@ -1,4 +1,5 @@
-CMAKE = $(shell which cmake3 || which cmake)
+#CMAKE = $(shell which cmake3 || which cmake)
+CMAKE = /home/ssingh/cmake-3.23.2/bin/cmake
 GITREV = $(shell git rev-parse --short HEAD)
 SRCPWD = $(shell pwd)
 

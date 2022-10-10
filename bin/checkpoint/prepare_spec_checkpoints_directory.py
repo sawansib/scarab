@@ -46,9 +46,16 @@ def define_benchmarks_and_suites():
         'wrf_06', 'sphinx3_06']
     spec2006_benchmarks = spec2006_int_benchmarks + spec2006_fp_benchmarks
 
-    spec2017_int_speed_benchmarks = [
-        'perlbench_17_s', 'gcc_17_s', 'mcf_17_s', 'omnetpp_17_s', 'xalancbmk_17_s',
-        'x264_17_s', 'deepsjeng_17_s', 'leela_17_s', 'exchange2_17_s', 'xz_17_s']
+    # spec2017_int_speed_benchmarks = [
+    #     'perlbench_17_s', 'gcc_17_s', 'mcf_17_s', 'omnetpp_17_s', 'xalancbmk_17_s',
+    #     'x264_17_s', 'deepsjeng_17_s', 'leela_17_s', 'exchange2_17_s', 'xz_17_s']
+    # #spec2017_int_speed_benchmarks = ['x264_17_s']
+    # spec2017_int_speed_benchmarks = [
+    #      'perlbench_17_s', 'mcf_17_s', 'omnetpp_17_s', 'xalancbmk_17_s',
+    #     'x264_17_s', 'deepsjeng_17_s', 'leela_17_s']
+    
+    spec2017_int_speed_benchmarks = ['mcf_17_s',  'xalancbmk_17_s']
+   
     spec2017_fp_speed_benchmarks = [
         'bwaves_17_s', 'cactuBSSN_17_s', 'lbm_17_s', 'wrf_17_s', 'cam4_17_s', 'pop2_17_s',
         'imagick_17_s', 'nab_17_s', 'fotonik3d_17_s', 'roms_17_s']
@@ -177,8 +184,8 @@ def create_run_dir_glob_search_path(benchmark, input_name):
                   ' SPEC2017 benchmarks')
             sys.exit(1)
 
-        path_template = (__args__.spec17_path + '/benchspec/CPU/*{benchmark}/run'
-                                                '/run_base_{input_name}*_{config}')
+        path_template = (__args__.spec17_path + '/benchspec/CPU/*{benchmark}*/run'
+                                                '/run_base_refspeed_x86-m64.0000')
 
     else:
         assert False
